@@ -69,3 +69,41 @@
     padding-right: 9px;
     padding-left: 9px;
 }
+
+.carousel-control-next,
+.carousel-control-prev
+
+{
+    top:105%
+}
+
+.carousel-indicators-numbers > li {
+    
+     text-indent: 0;
+     text-align: center;
+      width: 11px;
+      height: 24px;
+      border: none;
+      color: black;
+      
+      
+      
+}
+  .carousel-indicators{
+    bottom:-12%;
+    left:-57%
+  }
+.carousel-indicators > li {
+    width: 40px;
+   height: 40px;
+    border-radius: 100%;
+    
+  }
+.carousel-control-next
+{
+    right:13.5%
+}
+.carousel-control-prev
+{
+    left:70%
+}
