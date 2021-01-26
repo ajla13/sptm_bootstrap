@@ -1,0 +1,71 @@
+.navbar-custom {
+    background-color: #74B836;
+    height: 88px;
+
+
+}
+
+.button {
+    border-radius: 20px;
+    font-family: 'DM Sans';
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 0.9vw;
+    color: black;
+    font-style: normal;
+    padding-top: 4px;
+    padding-left: 17px;
+    margin-left: 10px;
+    height: 32px;
+    text-align: center;
+    font: bold;
+
+
+
+}
+
+.button-ETM {
+    border-radius: 20px;
+    font-family: 'DM Sans';
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 0.9vW;
+    background-color: #154391;
+    color: white;
+    font-style: normal;
+    padding-top: 4px;
+    padding-left: 17px;
+    height: 32px;
+    text-align: center;
+    font: bold;
+    margin-left: 10px;
+    border-color: #154391;
+
+}
+.card-text { 
+  font-size: 32px;
+  line-height: 40px;
+  font-style: normal;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  color: black;
+  font:bold;
+  margin-left: 30px;
+}
+.tags{
+    width:80px;
+    height:23px;
+    background-color:#74B836;
+    border: 1px solid transparent;
+    border-color: white;
+    border-radius: 11.5px;
+    font-family: 'DM Sans';
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 13.02px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 9px;
+    padding-left: 9px;
+}
