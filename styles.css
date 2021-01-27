@@ -1,6 +1,7 @@
 .navbar-custom {
     background-color: #74B836;
     height: 88px;
+    width: 100%;
 
 
 }
@@ -10,7 +11,7 @@
     font-family: 'DM Sans';
     line-height: 24px;
     font-weight: 700;
-    font-size: 0.9vw;
+    font-size: 18px;
     color: black;
     font-style: normal;
     padding-top: 4px;
@@ -20,8 +21,6 @@
     text-align: center;
     font: bold;
 
-
-
 }
 
 .button-ETM {
@@ -29,7 +28,7 @@
     font-family: 'DM Sans';
     line-height: 24px;
     font-weight: 700;
-    font-size: 0.9vW;
+    font-size: 18px;
     background-color: #154391;
     color: white;
     font-style: normal;
