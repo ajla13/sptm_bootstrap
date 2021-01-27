@@ -1,6 +1,7 @@
 .navbar-custom {
     background-color: #74B836;
     height: 88px;
+    width: 100%;
 
 
 }
@@ -19,8 +20,6 @@
     height: 32px;
     text-align: center;
     font: bold;
-
-
 
 }
 
