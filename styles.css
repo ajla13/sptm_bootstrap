@@ -10,12 +10,12 @@
     font-family: 'DM Sans';
     line-height: 24px;
     font-weight: 700;
-    font-size: 0.9vw;
+    font-size: 18px;
     color: black;
     font-style: normal;
     padding-top: 4px;
     padding-left: 17px;
-    margin-left: 10px;
+    
     height: 32px;
     text-align: center;
     font: bold;
@@ -29,7 +29,7 @@
     font-family: 'DM Sans';
     line-height: 24px;
     font-weight: 700;
-    font-size: 0.9vW;
+    font-size: 18px;
     background-color: #154391;
     color: white;
     font-style: normal;
@@ -64,12 +64,10 @@ text-align: left;
   font-weight: 500;
   color: black;
   font:bold;
-  margin-left: 30px;
+ 
 }
 
-.tags{
-    width:80px;
-    height:23px;
+.tags{  
     background-color:#74B836;
     border: 1px solid transparent;
     border-color: white;
@@ -107,26 +105,26 @@ text-align: left;
       
 }
   .carousel-indicators{
-    bottom:-12%;
-    left:-56.5%
+    bottom:-15%;
+    left:-87%
   }
 .carousel-indicators > li {
     width: 40px;
-   height: 40px;
+    height: 40px;
     border-radius: 100%;
     
   }
 .carousel-control-next
 {
-    right:13.5%
+    right:-7%
 }
 .carousel-control-prev
 {
-    left:70%
+    left:87%
 }
 .cards {
-    width: 330px;
-    height: 366px;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
     margin-top: 32px;
 }
