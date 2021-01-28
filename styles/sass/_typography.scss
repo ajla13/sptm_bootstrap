@@ -1,0 +1,286 @@
+/* ==========================================================================
+   Stylesheet for Typography
+   ========================================================================== 
+*/
+
+
+/*
+ * Custom fonts
+ */
+
+html {
+    font-size: $font-size-base;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: $font-family-primary;
+    line-height: $line-height-base;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    word-wrap: normal;
+    font-size: $font-size-p;
+}
+
+
+/**
+ *
+ * =======================================================================
+     Headings
+ * =======================================================================
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    font-family: $font-family-secondary;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    color: $heading-color-h1;
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    color: $heading-color-h2;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    color: $heading-color-h3;
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    color: $heading-color-h4;
+    line-height: 1.22222222;
+}
+
+h5 {
+    font-size: $font-size-h5;
+    color: $heading-color-h5;
+}
+
+h6 {
+    font-size: $font-size-h6;
+    color: $heading-color-h6;
+}
+
+
+/**
+ *
+ * =======================================================================
+     Paragraphs and Indentation
+ * =======================================================================
+ */
+
+p {
+    margin: auto auto 2.2rem;
+    font-size: $font-size-p;
+}
+
+.lead {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #000;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1.6rem 0;
+    padding: 0;
+}
+
+
+/**
+ *
+ * =======================================================================
+    Blockquote
+ * =======================================================================
+ */
+
+blockquote {
+    border-left: 1px solid $bq-border-color;
+    margin: 0 0 20px;
+    padding: 9px 20px 0 19px;
+    font-size: $bq-font-size;
+    background: $bq-background;
+    color: $bq-font-color;
+    p {
+        margin-bottom: 1.6rem;
+    }
+    footer {
+        color: $bq-cite-color;
+    }
+}
+
+blockquote.blockquote-reverse {
+    border-right: 1px solid $bq-border-color;
+    border-left: none;
+}
+
+.callout {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #eee;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.callout-info {
+    border-left-color: $brand-primary;
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $brand-primary;
+    }
+}
+
+ul.inline-list,
+ul.link-list {
+    list-style: outside none none;
+    margin: 0 0 17px -22px;
+    overflow: hidden;
+    padding: 0;
+}
+
+ul.inline-list>li,
+ul.link-list>li {
+    display: block;
+    float: left;
+    list-style: outside none none;
+    margin-left: 22px;
+}
+
+table.styled_table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+    margin: 0 0 18px;
+    border: 1px solid #ddd;
+    thead {
+        background-color: $brand-primary!important;
+    }
+    tbody {
+        border-top: 1px solid #ddd;
+    }
+}
+
+table.styled_table thead tr th {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 10px 9px;
+}
+
+table.styled_table tbody tr td {
+    border: medium none;
+    color: #333;
+    padding: 9px 10px;
+    vertical-align: top;
+}
+
+table.styled_table tr td {
+    display: table-cell;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+table.styled_table tbody tr:nth-child(2n) {
+    background: none repeat scroll 0 0 #f9f9f9;
+}
+
+
+/* Small devices (phone, up to 767px) */
+
+@media (max-width: $screen-xs-max) {
+    h1 {
+        font-size: round($font-size-h1 * 0.6667);
+        line-height: 1.25;
+    }
+    h2 {
+        font-size: round($font-size-h2 * 0.7222);
+        line-height: 1.15384615;
+    }
+    h3 {
+        font-size: round($font-size-h3 * 0.9166);
+        line-height: 1.13636364;
+    }
+    h4 {
+        font-size: round($font-size-h4 * 0.8571);
+        line-height: 1.11111111;
+    }
+}
+
+
+/* Small devices (tablets, From 768px up to 1199px) */
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    html {
+        line-height: 1.5;
+    }
+    h1 {
+        font-size: round($font-size-h1 * 0.8333);
+        line-height: 1.125;
+    }
+    h2 {
+        font-size: round($font-size-h2 * 0.8888);
+        line-height: 1.25;
+    }
+    h3 {
+        font-size: round($font-size-h3 * 0.875);
+        line-height: 1.25;
+    }
+    h4 {
+        font-size: round($font-size-h4 * 0.8571);
+        line-height: 1.22222222;
+    }
+}
+
+//bs4 override
+input.form-control {
+    font-size: $font-size-p;
+}
+
+.btn,
+ul,
+ol,
+a {
+    font-size: $font-size-p;
+}

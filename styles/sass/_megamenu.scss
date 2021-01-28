@@ -1,0 +1,720 @@
+.page_header {
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+.menu-container {
+    z-index: 1300;
+    width: 100%;
+    margin: 0 auto;
+    background: $mmenu-bg;
+    position: relative;
+    #sticky_trigger {
+        position: absolute;
+        left: 0;
+        top: $mmenu-sticky-bp;
+    }
+    .logo {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: 30px;
+        height: 100%;
+        a {
+            z-index: 2000;
+            display: inline-block;
+            height: 100%;
+            position: relative;
+        }
+        img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50px;
+        }
+    }
+    .cst-search {
+        color: $mmenu-color;
+        a {
+            cursor: pointer;
+            color: inherit;
+            &:hover {
+                opacity: 0.7;
+                text-decoration: none;
+            }
+        }
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1301;
+    }
+    .showing {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.menu-mobile {
+    display: none;
+    padding: 20px;
+    &:after {
+        content: "\f29a";
+        font-family: "FontAwesome";
+        font-size: 2.5rem;
+        padding: 0;
+        float: right;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $brand-primary;
+    }
+}
+
+.menu-dropdown-icon {
+    &:before {
+        content: "\f2c2";
+        font-family: "FontAwesome";
+        display: none;
+        cursor: pointer;
+        float: right;
+        padding: 15px;
+        background: darken($mmenu-dropdown-bg,5%);
+        color: #333;
+        line-height: 20px
+    }
+}
+
+.menu {
+    > ul {
+        margin: 0 auto;
+        width: 100%;
+        list-style: none;
+        padding: $mmenu-padding; 
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: left;
+        &:before,
+        &:after {
+            content: "";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+        > li {
+            display: inline-block;
+            background: $mmenu-bg;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            > a {
+                text-decoration: none;
+                padding: 3px 30px;
+                margin: 17px 0;
+                display: block;
+                color: $mmenu-color;
+                font-size: $mmenu-font-size;
+                background: #fff;
+                border-radius: 20px;
+                font-weight: bold;
+                &:hover {
+                    color: $mmenu-color-hover;
+                    opacity: 0.8;
+                }
+            }
+            
+            > ul {
+                width: 100%;
+                background: $mmenu-dropdown-bg;
+                padding: 20px 0 0;
+                position: absolute;
+                z-index: 99;
+                left: 0;
+                margin: 0;
+                list-style: none;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                top: 110%;
+                transition: .2s ease-in-out;
+                visibility: hidden;
+                opacity: 0;
+                border-radius: $mmenu-dropdown-brad;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                &:before,
+                &:after {
+                    content: "";
+                    display: table;
+                }
+                &:after {
+                    clear: both;
+                }
+                > li {
+                    margin: 0 0 20px;
+                    padding-bottom: 0;
+                    list-style: none;
+                    background: none;
+                    width: 25%;
+                    a {
+                        color: $mmenu-dropdown-color;
+                        padding: 0 20px 7px;
+                        width: 100%;
+                        display: block;
+                        border-bottom: 1px solid darken($mmenu-dropdown-bg,10%);
+                        font-size: calc(#{$mmenu-font-size} - 1px);
+                        font-weight: 700;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                    > ul {
+                        display: block;
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                        &:before,
+                        &:after {
+                            content: "";
+                            display: table;
+                        }
+                        &:after {
+                            clear: both;
+                        }
+                        > li {
+                            float: left;
+                            width: 100%;
+                            padding: 0;
+                            margin: 0;
+                            position: relative;
+                            a {
+                                border: 0;
+                                font-size: calc(#{$mmenu-font-size} - 2px);
+                                color: $mmenu-dropdown-color;
+                                font-weight: 400;
+                                padding: 7px 20px;
+                                &:hover {
+                                    background: darken($mmenu-dropdown-bg,5%);
+                                }
+                            }
+                            &:hover {
+                                background: darken($mmenu-dropdown-bg,5%);
+                                 > ul {
+                                     visibility: visible;
+                                 }
+                            }
+                            > ul { 
+                                visibility: hidden;
+                                transition: .2s ease-in-out;
+                                width: 200px;
+                                left: auto;
+                                padding: 0;
+                                position: absolute;
+                                top: 0;
+                                right: -200px;
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+                                background: darken($mmenu-dropdown-bg,5%);
+                                z-index: 1;
+                                &:hover {
+                                    visibility: visible; 
+                                }
+                                > li {
+                                    position: relative;
+                                    a {
+                                        font-size: calc(#{$mmenu-font-size} - 3px);
+                                        padding: 6px 15px;
+                                    }
+                                    &:first-child:before {
+                                        content: "...";
+                                        left: -20px;
+                                        top: -4px;
+                                        position: absolute;
+                                        visibility: visible;
+                                        opacity: 1;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.normal-sub {
+                    width: 450px;
+                    left: auto;
+                    padding: 0;
+                    flex-wrap: wrap;
+                    transition: none!important;
+                    border-radius: 0;
+
+                    > li {
+                        width: 100%;
+                        margin: 0;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            left: -100vw;
+                            right: 0;
+                            background: #74B836;
+                            height: 100%;
+                            width: 100vw;
+                            position: absolute;
+                            top: 0;
+                        }
+                        &:after {
+                            content: "";
+                            right: -100vw;
+                            left: auto;
+                            background: #74B836;
+                            height: 100%;
+                            width: 100vw;
+                            position: absolute;
+                            top: 0;
+                        }
+                        a {
+                            border: 0;
+                            padding: 7px 20px;
+                            font-size: $mmenu-font-size;
+                            color: $mmenu-dropdown-color;
+                            font-weight: 400;
+                        }
+                        &:first-child {
+                            border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                        }
+                        &:last-child {
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+                        &:hover {
+                             background: darken($mmenu-dropdown-bg,5%);
+                            > ul {
+                                visibility: visible;
+                            }
+                        }
+                        > ul { 
+                            visibility: hidden;
+                            transition: .2s ease-in-out;
+                            width: 200px;
+                            left: auto;
+                            padding: 0;
+                            position: relative;
+                            top: 0;
+                            right: -200px;
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            background: darken($mmenu-dropdown-bg,5%);
+                            z-index: 1;
+                            &:hover {
+                                visibility: visible; 
+                            }
+                            > li {
+                                position: relative;
+                                a {
+                                    font-size: calc(#{$mmenu-font-size} - 3px);
+                                    padding: 6px 15px;
+                                }
+                                &:first-child:before {
+                                    content: "...";
+                                    left: -20px;
+                                    top: -4px;
+                                    position: absolute;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > li:last-child {
+            > a {
+                text-decoration: none;
+                padding: 3px 30px;
+                margin: 17px 0;
+                display: block;
+                color: #fff!important;
+                font-size: $mmenu-font-size;
+                background: #154391!important;
+                border-radius: 20px;
+                font-weight: bold;
+                &:hover {
+                    color: $mmenu-color-hover;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Mobile style's
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (min-width: 960px) {
+    .menu-dropdown-icon > a {
+        position: relative;
+        &:after {
+            content: "\f110";
+            font-family: "FontAwesome";
+            color: inherit;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 10px;
+        }
+    }
+    .sticky {
+        .menu-container {
+            .cst-search {
+                color: $mmenu-dropdown-color;
+                a {
+                    color: inherit;
+                }
+            }
+            .menu {
+                > ul {
+                    > li {
+                        > a {
+                            color: $mmenu-dropdown-color;
+                            &:hover {
+                                color: $mmenu-dropdown-color;
+                            }
+                        }
+                        
+                        > ul {
+                            background: $mmenu-dropdown-bg;
+                            > li {
+                                a {
+                                    color: $mmenu-dropdown-color;
+                                }
+                                > ul {
+                                    > li {
+                                        a {
+                                            color: $mmenu-dropdown-color;
+                                        }
+                                    }
+                                }
+                            }
+                            &.normal-sub {
+                                > li {
+                                    a {
+                                        color: $mmenu-dropdown-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 575px) {
+    .menu-container {
+        width: 100vw;
+        margin-left: -15px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 959px) {
+    .page_header {
+        background: $mmenu-dropdown-bg;
+        .container {
+            max-width: 100%;
+        }
+    }
+    .menu-container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 959px) {
+    .menu-container {
+        .logo {
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 15px;
+            height: 60px;
+            img {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 46px;
+            }
+        }
+        .cst-search {
+            color: $brand-primary;;
+            a {
+                cursor: pointer;
+                color: inherit;
+            }
+            position: absolute;
+            right: 80px;
+            top: 18px;
+            transform: translateY(0);
+            z-index: 1301;
+        }
+    }
+    .menu-mobile {
+        display: block;
+        height: 60px;
+        background: $mmenu-dropdown-bg;
+    }
+    .menu-dropdown-icon {
+        &:before {
+            display: block;
+        }
+    }
+    .menu {
+        > ul {
+            display: none;
+            padding: 0!important;
+            > li {
+                width: 100%;
+                float: none;
+                display: block;
+                a {
+                    padding: 15px 20px;
+                    width: 100%;
+                    display: block;
+                    line-height: 20px;
+                    color: $mmenu-dropdown-color;
+                    &:hover {
+                         color: $mmenu-dropdown-color;
+                    }
+                }
+                > ul {
+                    position: relative;
+                    display: none;
+                    top: auto;
+                    visibility: visible;
+                    opacity: 1;
+                    &.normal-sub {
+                        width: 100%;
+                        > li {
+                             &:hover {
+                                background: none!important;
+                            }
+                            > ul { 
+                                visibility: visible;
+                                width: 100%;
+                                left: auto;
+                                padding: 0;
+                                position: relative;
+                                top: auto;
+                                right: auto;
+                                margin: 0;
+                                padding: 0;
+                                background: none;
+                                z-index: 1;
+                                > li {
+                                    a {
+                                        font-size: calc(#{$mmenu-font-size} - 2px);
+                                        padding: 7px 15px 7px 42px;
+                                        
+                                    }
+                                    &:first-child:before,
+                                    &:before {
+                                        content: "\f260";
+                                        font-family: "FontAwesome";
+                                        left: 20px;
+                                        top: 4px;
+                                        position: absolute;
+                                        visibility: visible;
+                                        opacity: 1;
+                                        font-size: 16px;
+                                        transform: scaleX(-1) rotate(90deg);
+                                        filter: FlipH;
+                                        -ms-filter: "FlipH";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    > li {
+                        float: none;
+                        width: 100%;
+                        margin-top: 20px;
+                        &:first-child {
+                            margin: 0;
+                        }
+                        a {
+                            &:hover {
+                                background: none!important;
+                            }
+                        }
+                        > ul {
+                            position: relative;
+                            > li {
+                                float: none;
+                                &:hover {
+                                    background: none!important;
+                                }
+                                a {
+                                    &:hover {
+                                        background: none!important;
+                                    }
+                                }
+                                 > ul { 
+                                    visibility: visible;
+                                    width: 100%;
+                                    left: auto;
+                                    padding: 0;
+                                    position: relative;
+                                    top: auto;
+                                    right: auto;
+                                    margin: 0;
+                                    padding: 0;
+                                    background: none;
+                                    z-index: 1;
+                                    > li {
+                                        a {
+                                            font-size: calc(#{$mmenu-font-size} - 2px);
+                                            padding: 7px 15px 7px 42px;
+                                            
+                                        }
+                                        &:first-child:before,
+                                        &:before {
+                                            content: "\f260";
+                                            font-family: "FontAwesome";
+                                            left: 20px;
+                                            top: 4px;
+                                            position: absolute;
+                                            visibility: visible;
+                                            opacity: 1;
+                                            font-size: 16px;
+                                            transform: scaleX(-1) rotate(90deg);
+                                            filter: FlipH;
+                                            -ms-filter: "FlipH";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .show-on-mobile {
+            display: block;
+            background: $mmenu-dropdown-bg;
+            max-height: calc(80vh - 60px);
+            overflow-y: scroll;
+        }
+    }
+}
+.cst-search-popup {
+    background: $popup-serch-bg;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    opacity: 0;
+    z-index: 1300;
+    visibility: hidden;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    transition-property: all;
+    -webkit-transition-property: top, opacity, visibility;
+    transition-property: top, opacity, visibility;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+        left: 0;
+    }
+    .cst-search-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 40px;
+        color: rgba( #fff, .8 );
+        text-align: center;
+        cursor: pointer;
+        transition: .25s ease-in-out;
+    }
+    .cst-search-wrap {
+        width: 100%;
+        .cst-search-form {
+            max-width: 660px;
+            padding: 0 25px;
+            margin: 0 auto;
+            position: relative;
+            label {
+                width: 100%;
+            }
+            .cst-search-field {
+                background: none;
+                border: none;
+                height: 60px;
+                padding: 15px 0;
+                border-bottom: 1px solid rgba( #fff, .8 );
+                width: 100%;
+                display: inline-block;
+                color: #fff;
+                @include placeholder(rgba( #fff, .8 ));
+                transition: .25s ease-in-out;
+                &:focus,&:hover,&:active {
+                    border-bottom: 1px solid rgba( $brand-primary, 1.0 );
+                }
+            }
+            .cst-search-submit {
+                position: absolute;
+                top: 50%;
+                right: 25px;
+                transform: translateY(-60%);
+                background: none;
+                color: rgba( #fff, .8 );
+                border: none;
+                font-size: 2.3rem;
+                cursor: pointer;
+                transition: .25s ease-in-out;
+                &:hover {
+                    color: rgba( #fff, 1.0 );
+                }
+            }
+        }
+    }
+    
+}
+
+.blue {
+    .menu-container {
+        background: #008ED4;
+    }
+    .menu > ul > li > ul {
+        background: #008ED4;
+    }
+    .menu > ul > li {
+        background: #008ED4;
+    }
+    .menu > ul > li > ul.normal-sub > li::before {
+        background: #008ED4;
+    }
+    .menu > ul > li > ul.normal-sub > li::after {
+        background: #008ED4;
+    }
+}

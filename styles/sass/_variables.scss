@@ -1,0 +1,122 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+//
+//## brand colors for use across webpages.
+
+$brand-primary:         #74B836;
+$color-blue:            #0090D9;
+$color-violet:          #652496;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff;
+//** Global text color on `<body>` and headings.
+$text-color:            #000000;
+$heading-color:			#000000;
+
+$heading-color-h1:		$heading-color;
+$heading-color-h2:		$heading-color;
+$heading-color-h3:		$heading-color;
+$heading-color-h4:		$heading-color;
+$heading-color-h5:		$heading-color;
+$heading-color-h6:		$heading-color;
+
+//** Global textual link color.
+$link-color:            $brand-primary;
+$link-hover-color:      darken($link-color, 15%);
+
+//Main navigation
+
+$mmenu-sticky-bp:       200px;
+$mmenu-bg:              $brand-primary;
+$mmenu-color:           $text-color;
+$mmenu-color-hover:     $mmenu-color;
+$mmenu-padding:         0 30px 0 360px;
+$mmenu-font-size:       1.8rem;
+$mmenu-dropdown-bg:     $brand-primary;
+$mmenu-dropdown-brad:   0px;
+$mmenu-dropdown-color:  $text-color;
+
+$popup-serch-bg:        rgba(36, 36, 36, 0.97);
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-primary-name:   "DM Sans";
+$font-family-secondary-name: "DM Sans";
+
+$font-family-primary:     $font-family-primary-name,"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+$font-family-secondary:   $font-family-secondary-name,"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+
+$font-size-base:          10px;
+$font-size-p:          	  2.6rem;
+$font-size-large:         ceil(($font-size-base * 1.25));
+$font-size-small:         ceil(($font-size-base * 0.8215));
+
+// default heading sizes on large screens
+$font-size-h1:            4.6rem;
+$font-size-h2:            4.6rem;
+$font-size-h3:            3.2rem;
+$font-size-h4:            2.4rem;
+$font-size-h5:            1.8rem;
+$font-size-h6:            1.6rem;
+
+$line-height-base:        1.46;
+$line-height-golden:      1.618;
+
+//**  Blockquote
+$bq-border-color:         $brand-primary;
+$bq-font-size:            $font-size-base;
+$bq-font-color:           $text-color;
+$bq-cite-color:           darken($text-color, 20%);
+$bq-background:           none;
+
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+$zindex-navbar:            1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1060;
+$zindex-tooltip:           1070;
+$zindex-navbar-fixed:      1030;
+$zindex-modal-background:  1040;
+$zindex-modal:             1050;
+$zindex-cookies:           1035;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+
+$screen-sm:                  576px;
+$screen-sm-min:              $screen-sm;    
+
+$screen-md:                  768px;
+$screen-md-min:              $screen-md;
+
+$screen-lg:                  992px;
+$screen-lg-min:              $screen-lg;
+
+$screen-xl:                  1200px;
+$screen-xl-min:              $screen-xl;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+$screen-lg-max:              ($screen-xl-min - 1);
+
+$path:                "../";

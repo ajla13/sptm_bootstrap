@@ -1,0 +1,282 @@
+/* ==========================================================================
+   Stylesheet for (Project name)
+   ========================================================================== 
+
+Content:
+1. GENERAL STYLES
+2. PAGE STRUCTURE ELEMENTS
+3. WRAPPERS
+4. NAVIGATION
+5. CLOUDS
+6. BUTTONS
+7. CONTENT 
+8. TABS, BANNERS and SLIDERS
+9. OTHER
+10. JQUERY DYNAMIC CLASSES
+*/
+
+/*
+ * 1. GENERAL STYLES
+ * -----------------------------------------------------------------------------------------
+ */
+
+body {
+    background: $body-bg;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: lighten($brand-primary, 40%);
+    text-shadow: none;
+}
+
+::selection {
+    background: lighten($brand-primary, 40%);
+    text-shadow: none;
+}
+
+
+/*
+ * Link basic styles
+ */
+
+a {
+    text-decoration: none;
+    color: $link-color;
+    transition: 0.25s;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+}
+
+/*
+ * 2. PAGE STRUCTURE ELEMENTS
+ * -----------------------------------------------------------------------------------------
+ */
+.page_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1299;
+    transition: .25s ease-in-out;
+
+    &.sticky {
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+        background: $mmenu-dropdown-bg;
+    }
+}
+
+
+/*
+ * 3. WRAPPERS
+ * -----------------------------------------------------------------------------------------
+ */
+
+/*
+ * 4. NAVIGATION
+ * -----------------------------------------------------------------------------------------
+ */
+
+/*
+ * 5. CLOUDS
+ * -----------------------------------------------------------------------------------------
+ */
+
+/*
+ * 6. BUTTONS
+ * -----------------------------------------------------------------------------------------
+ */
+
+/*
+ * 7. CONTENT
+ * -----------------------------------------------------------------------------------------
+ */
+
+.first_screen {
+    min-height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+
+/*
+ * 8. TABS, BANNERS and SLIDERS
+ * -----------------------------------------------------------------------------------------
+ */
+
+/*
+ * 9. OTHER
+ * -----------------------------------------------------------------------------------------
+*/
+
+/*
+ * Responsive Google maps
+ */
+.google-map-canvas {
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16: 9 */
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/*
+ * 10. JQUERY DYNAMIC CLASSES
+ * -----------------------------------------------------------------------------------------
+ */
+
+/*
+ * Parsley 2.0 notification styles
+ */
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+    border: 1px solid #ff0000 !important;
+}
+
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+    color: #80c248;
+    border: 1px solid #80c248 !important;
+}
+
+.parsley-errors-list {
+    margin: 2px 0 3px 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    text-align: left;
+    color: #ff0000;
+    opacity: 0;
+    transition: .35s;
+}
+
+.parsley-errors-list.filled {
+    opacity: 1;
+}
+
+#fancybox-wrap,
+#fancybox-wrap * {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clear {
+    clear: both;
+}
+
+.no_margin {
+    margin: 0 !important;
+}
+
+.no_padding {
+    padding: 0 !important;
+}
+
+.padding_top_10 {
+    padding: 10px 0 0;
+}
+
+.padding_top_20 {
+    padding: 20px 0 0;
+}
+
+.padding_top_30 {
+    padding: 30px 0 0;
+}
+
+.transition {
+    transition: 0.5s;
+}
+
+.three-cards{
+    margin-left:13.625%;
+    margin-right:20.75%;
+    margin-top:14.4rem;
+
+    #firstCard {
+        background-color: $color-blue; 
+    }
+    #secondCard {
+        background-color: $brand-primary;
+        
+    }
+    #thirdCard  {
+        background-color: $color-violet;
+
+        .svg-icons {
+            top:38%;
+            
+        }
+        
+    }
+
+    .cards{
+        width: 100%;
+        min-height:36rem;
+        border-radius: 1.5rem;
+        margin-top: 3.2rem;
+        
+        .svg-icons {
+            position:absolute;
+            left: 50%;
+            top:30%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+             transform: translateX(-50%)
+            
+    }
+    button {
+        border-radius: 5.1rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        position:absolute;
+        left:50%;
+        top:80%; 
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%)
+        
+    }
+    .arrow {
+        position: relative;
+        margin-left: 3px;
+        text-align: center;
+        
+    }
+     }
+    
+}
